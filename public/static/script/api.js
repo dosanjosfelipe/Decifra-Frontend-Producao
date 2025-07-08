@@ -11,7 +11,7 @@ import {
 
 // PEGAR A PALAVRA VERDADEIRA DEPOIS QUE O JOGO ACABOU
 export async function getRealWord() {
-  const URL = "http://decifra-ALGO.onrender.com/realWord";
+  const URL = "https://decifra-backend-producao.onrender.com/realWord";
 
   if (!localStorage.getItem("correct_word").includes("*")) {
     return;
@@ -33,7 +33,7 @@ export async function getRealWord() {
 
 // VERIFICA SE TEM UMA PALAVRA NOVA NO BACKEND PARA RECOMEÇAR O JOGO
 export async function verifyNewWord(oldWord) {
-  const URL = "http://decifra-ALGO.onrender.com/verifyWord";
+  const URL = "https://decifra-backend-producao.onrender.com/verifyWord";
   const data = oldWord.slice(1, -1);
 
   try {
@@ -78,7 +78,7 @@ export async function getTheNewWord() {
     }
   }
 
-  const URL = "http://decifra-ALGO.onrender.com/cryptWord";
+  const URL = "https://decifra-backend-producao.onrender.com/cryptWord";
 
   try {
     const resp = await fetch(URL, {
@@ -98,7 +98,7 @@ export async function getTheNewWord() {
 
 // ENVIA A LETRA QUE O USUÁRIO CLICOU PARA O BACKEND
 export async function sendLetter(letter) {
-  const URL = "http://decifra-ALGO.onrender.com/letter";
+  const URL = "https://decifra-backend-producao.onrender.com/letter";
   const data = letter.toUpperCase();
 
   try {
