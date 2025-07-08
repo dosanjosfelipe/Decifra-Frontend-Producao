@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="Decifra Icon"
+      href="./static/assets/img/decifra-logo.svg"
+      type="image/svg"
+    />
+    <link rel="stylesheet" href="./static/style/style.css" />
+    <title>Decifra!</title>
+  </head>
+  <body>
+    <h1 class="title">DECIFRA!</h1>
+
+    <audio
+      src="./static/assets/aud/winSound.mp3"
+      id="winSound"
+      preload="auto"
+    ></audio>
+    <audio
+      src="./static/assets/aud/loseSound.mp3"
+      id="loseSound"
+      preload="auto"
+    ></audio>
+
+    <main class="mid-container">
+      <div class="left-mid-container">
+        <div class="theme-container">
+          <span class="theme">PAÍSES</span>
+        </div>
+        <div class="hearts-container">
+          <span class="hearts" id="heart1">
+            <img src="./static/assets//img/heart.png" alt="A life Heart" />
+          </span>
+          <span class="hearts" id="heart2">
+            <img src="./static/assets//img/heart.png" alt="A life Heart" />
+          </span>
+          <span class="hearts" id="heart3">
+            <img src="./static/assets//img/heart.png" alt="A life Heart" />
+          </span>
+          <span class="hearts" id="heart4">
+            <img src="./static/assets//img/heart.png" alt="A life Heart" />
+          </span>
+          <span class="hearts" id="heart5">
+            <img src="./static/assets//img/heart.png" alt="A life Heart" />
+          </span>
+        </div>
+      </div>
+      <div class="middle-mid-container">
+        <span class="resultGame" id="resultGame"></span>
+        <span class="letterAlreadyUsed" id="letterAlreadyUsed"></span>
+        <span class="realWord" id="realWord"></span>
+      </div>
+      <div class="right-mid-container">
+        <span class="usedLetters" id="usedLetters"></span>
+      </div>
+    </main>
+
+    <section class="word-container" id="wordContainer"></section>
+
+    <!-- Letras e seus espaços vazios são inseridos dinamicamente via JS -->
+
+    <script type="module" src="./static/script/api.js"></script>
+    <script type="module" src="./static/script/main.js"></script>
+  </body>
+</html>
